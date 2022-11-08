@@ -4,15 +4,18 @@
   "version": "1.0.0",
   "description": "A template for kick starting a Cloudflare Workers project",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "dev": "wrangler dev",
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "set NODE_OPTIONS=--experimental-vm-modules && npx vitest run",
     "format": "prettier --write '**/*.{js,css,json,md}'"
   },
   "author": "Patrick Smith <pgwsmith@gmail.com>",
   "license": "MIT",
   "devDependencies": {
-    "prettier": "^2.7.1"
+    "prettier": "^2.7.1",
+    "vitest": "^0.24.5",
+    "vitest-environment-miniflare": "^2.11.0"
   },
   "dependencies": {
     "itsybitsy": "^0.1.0",
